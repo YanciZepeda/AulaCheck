@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* =========================================================================
+       1. PERFIL ESCUELAS / PROFESORES (Estilo Limpio, Institucional y Claro)
+       Colores base: Azul rey (#2563EB), blanco puro (#FFFFFF), gris claro (#F8FAFC)
+       ========================================================================= */
+    --royal-blue: #2563EB;
+    --royal-blue-hover: #1D4ED8;
+    --royal-blue-deep: #1E3A8A;
+    --inst-bg: #F8FAFC;
+    --inst-card: #FFFFFF;
+    --inst-border: #E2E8F0;
+    --inst-text: #1E293B;
+    --inst-text-muted: #475569;
+
+    /* =========================================================================
+       2. PERFIL PADRES (Estilo Cálido, Amigable y Atractivo)
+       Colores base: Amarillo suave (#FFFBEB / #FEF9C3), naranja pastel (#FFEDD5 / #FED7AA),
+       azul brillante (#0EA5E9 / #0284C7)
+       ========================================================================= */
+    --parent-bg: #FFFBEB;
+    --parent-bg-alt: #FEF9C3;
+    --parent-card: #FFFFFF;
+    --parent-card-tint: #FFF7ED;
+    --parent-border: #FED7AA;
+    --parent-border-subtle: #FFEDD5;
+    --parent-accent: #0EA5E9;
+    --parent-accent-hover: #0284C7;
+    --parent-accent-dark: #0369A1;
+    --parent-text: #1F2937;
+    --parent-text-muted: #4B5563;
+  }
+}
+
+/* Ensure clean table structure and border collapse */
+table {
+  border-collapse: collapse;
+}
+
+/* Universal high-contrast input styles:
+   Text MUST be stark dark (#1E293B / #1F2937) on light backgrounds */
+input[type="number"],
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  color: #1E293B !important;
+  background-color: #FFFFFF;
+}
+
+/* Avoid invisible placeholder text */
+input::placeholder,
+textarea::placeholder {
+  color: #64748B !important;
+  opacity: 1;
+}
+
+/* Institutional Profile Utilities */
+.bg-inst-blue {
+  background-color: #2563EB;
+}
+.text-inst-blue {
+  color: #2563EB;
+}
+.border-inst-blue {
+  border-color: #2563EB;
+}
+.text-inst-dark {
+  color: #1E293B;
+}
+
+/* Parent Profile Utilities */
+.bg-parent-bright-blue {
+  background-color: #0EA5E9;
+}
+.text-parent-bright-blue {
+  color: #0369A1;
+}
+.border-parent-orange {
+  border-color: #FED7AA;
+}
+.text-parent-dark {
+  color: #1F2937;
+}
+
+/* Print utilities for Exam, OMR & Grades PDF printing */
+@media print {
+  @page {
+    size: auto;
+    margin: 12mm 10mm 12mm 10mm;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .no-print, header, nav, aside {
+    display: none !important;
+  }
+  .page-break-after {
+    page-break-after: always;
+    break-after: page;
+  }
+}
+
+

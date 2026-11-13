@@ -1,0 +1,6 @@
+{
+  "name": "EduControl Pro - Sistema de Gestión Escolar",
+  "description": "Plataforma integral de notas académicas, asistencia en tiempo real, lector óptico de exámenes (OMR), notificaciones para padres y gestión de escuelas públicas y privadas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
